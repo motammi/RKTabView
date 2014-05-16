@@ -226,6 +226,7 @@
         interfaceElement = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, tabItem.imageForCurrentState.size.width, tabItem.imageForCurrentState.size.height)];
         [((UIButton *)interfaceElement) setImage:tabItem.imageForCurrentState forState:UIControlStateNormal];
         [((UIButton *)interfaceElement) addTarget:tabItem.target action:tabItem.selector forControlEvents:UIControlEventTouchUpInside];
+        [tab addTarget:tabItem.target action:tabItem.selector forControlEvents:UIControlEventTouchUpInside];
     } else {
         interfaceElement = [[UIImageView alloc] initWithImage:tabItem.imageForCurrentState];
     }
